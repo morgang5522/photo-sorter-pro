@@ -18,10 +18,11 @@ def natural_sort_key(s):
 def index():
     images = sorted([f for f in os.listdir(IMAGE_DIR) if f.lower().endswith(("jpg","jpeg","png"))])
     if not images:
-        return "<h1>All done!</h1><p>No more images to sort.</p>"
-
-    image = images[0]
-    upcoming_images = images[1:7] # Show next 6 images
+        image = None
+        upcoming_images = []
+    else:
+        image = images[0]
+        upcoming_images = images[1:7] # Show next 6 images
     
     sets_data = []
     # Natural sort for alphabetical + numerical awareness
