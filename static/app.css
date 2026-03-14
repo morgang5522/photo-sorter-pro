@@ -1,0 +1,42 @@
+/* Bootstrap Custom Overrides & Specific App Logic */
+.set-card {
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.set-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(
+    56,
+    189,
+    248,
+    0.5
+  ) !important; /* Matches --accent-color style */
+  background-color: rgba(56, 189, 248, 0.05) !important;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Ensure fixed ratios for thumbnails if needed though object-fit helps */
+.object-fit-contain {
+  object-fit: contain;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
